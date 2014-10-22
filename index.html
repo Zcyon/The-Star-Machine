@@ -1,0 +1,54 @@
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>The Star Machine by Zcyon</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <script type="text/javascript" src="lib/HiCanvas.js"></script>
+    <script type="text/ecmascript" src="engine.js"></script>
+  
+  </head>
+  
+  <body>
+    
+    <img id="banner" src="assets/banner.png" alt="Woops, the image couldn't load!"></img>
+  
+    <br>
+    
+    <div id="interface_wrapper" align="center">
+      
+      <div id="canvas_wrapper">
+        <!-- Contiene el canvas -->
+      </div>
+      
+      <br>
+      
+      <input id="vert_input" type="number" placeholder="Número de vértices">
+      
+      <input type="button" value="Dibujar Estrella" onclick="checkInputContents();">
+      
+      
+    </div>
+    
+    <script type="text/javascript">
+      
+      var canvas_config = {
+        width: 500,
+        height: 500,
+        layers: 2
+      }
+      
+      var canvas = new HiCanvas(canvas_config.width, canvas_config.height, canvas_config.layers);
+      
+      canvas.setFont('20px Arial', 0);
+      canvas.setId('star_canvas');
+      canvas.addToObj('canvas_wrapper');
+      
+    
+      
+    </script>
+    
+  </body>
+
+</html>

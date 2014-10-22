@@ -1,0 +1,18 @@
+#banner {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  
+  width: 400px;
+}
+
+#inteface_wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+
+#star_canvas {
+  border: 1px solid black;
+}
