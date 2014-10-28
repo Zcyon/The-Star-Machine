@@ -6,13 +6,18 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     
     <script type="text/javascript" src="lib/HiCanvas.js"></script>
-    <script type="text/ecmascript" src="engine.js"></script>
+    <script type="text/javascript" src="lib/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="engine.js"></script>
+    <script type="text/javascript" src="responses.js">
+    </script>
   
   </head>
   
   <body>
     
-    <img id="banner" src="assets/banner.png" alt="Woops, the image couldn't load!"></img>
+    <img id="main_banner" class="banner" src="assets/banner.png" alt="Woops, the image couldn't load!"></img>
+    
+    <img id="void_banner" class="banner" src="assets/logo_black.png" alt="Woops, the image couldn't load!" style="display:none">
   
     <br>
     
@@ -22,9 +27,18 @@
         <!-- Contiene el canvas -->
       </div>
       
+      
+      <div id="message_wrapper" hidden>
+        
+        <textarea readonly id="message_text">
+          <!-- Contiene el mensaje desbloqueable -->
+        </textarea>
+        
+      </div>
+      
       <br>
       
-      <input id="vert_input" type="number" placeholder="Número de vértices">
+      <input id="vert_input" type="text" placeholder="Número de vértices">
       
       <input type="button" value="Dibujar Estrella" onclick="checkInputContents();">
       

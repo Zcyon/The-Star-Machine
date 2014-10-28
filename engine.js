@@ -5,15 +5,18 @@ var checkInputContents = function() {
   
   var input = document.getElementById('vert_input');
   var value = parseInt(Math.round(input.value));
+  clearInterval(animation);
   
     if (isNaN(value) === true) {    
-      alert('You should write ONLY NUMBERS in the input area');
+      //alert('You should write ONLY NUMBERS in the input area');
+      value = input.value;
+      value = value.toLowerCase();
+      showDialog(value);
       input.value = '';
     }
   
     else {
-      clearInterval(animation);
-      
+      showCanvas();
       animation = setInterval(function() {
           
         canvas.eraseRectangle(0, 0, canvas.getWidth(), canvas.getHeight(), 0);
@@ -46,12 +49,12 @@ hicanvas.drawStringCentered(hicanvas.getHeight()/2 + 30, hicanvas.getWidth(), 'O
       
     }
   
-    else {
       
       // Check if the amount of vertices is even...
         if (vertices%2 === 0) {
           vertices = vertices * 2;
         }
+      
       
       var inset = 0.5;
       
@@ -83,5 +86,5 @@ hicanvas.drawStringCentered(hicanvas.getHeight()/2 + 30, hicanvas.getWidth(), 'O
       hicanvas.restore(0);
       return true;
       
-    }
+    
 }
